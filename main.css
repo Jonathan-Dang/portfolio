@@ -70,7 +70,7 @@ body {
     flex-direction: column;
 
 
-    background-image: url("blackhole.gif");
+    background-image: url("./blackhole.gif");
     background-size: contain;
     background-position: center;
     position: relative;
