@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Website</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="nameLogo">
+            <img src="/" alt="JD LOGO">
+        </div>
+        
+        <div class="nav-list">
+            <div class="nav-button-wrapper">
+                <a class="nav-button" href="index.html">Homepage</a>
+            </div>
+            <div class="nav-button-wrapper">
+                <a class="nav-button" href="aboutMe.html">About Me</a>
+            </div>
+            <div class="nav-button-wrapper">
+                <a class="nav-button" href="">Projects</a>
+            </div>
+            <div class="nav-button-wrapper">
+                <a class="nav-button" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+
+<h1 class="slideshow-title">My Projects</h1>
+<div class="slideshow-container">
+    <div class="mySlides">
+        <img src="/assets/img/CS8.png" alt="">
+        <div class="slide-caption">CS8 Projects</div>
+    </div>
+    <div class="mySlides">
+        <img src="/assets/img/website.png" alt="">
+        <div class="slide-caption">This Website</div>
+    </div>
+    <div class="mySlides">
+        <img src="/assets/img/CS3A.png" alt="">
+        <div class="slide-caption">CS3A</div>
+    </div>
+
+    <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+</main>
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+</script>
+
+
+<footer>
+    <nav>
+        <div class="iconWrapper">
+            <div class="iconContainer">
+                <a href="https://www.linkedin.com/in/jd-jona-dang/" class="icon" target="blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="https://github.com/Jonathan-Dang" class="icon" target="blank"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    
+        <div class="footerCR">
+            <div class="footerCR-text">&copy; Jonathan Dang 2023</div>
+        </div>
+    </nav>
+</footer>
+
+
+<div class="stars">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+</div>
+</body>
+</html>

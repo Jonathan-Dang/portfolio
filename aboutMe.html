@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Website</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="nameLogo">
+            <img src="/" alt="JD LOGO">
+        </div>
+        
+        <div class="nav-list">
+            <div class="nav-button-wrapper">
+                <a class="nav-button" href="index.html">Homepage</a>
+            </div>
+            <div class="nav-button-wrapper">
+                <a class="nav-button" href="">About Me</a>
+            </div>
+            <div class="nav-button-wrapper">
+                <a class="nav-button" href="projects.html">Projects</a>
+            </div>
+            <div class="nav-button-wrapper">
+                <a class="nav-button" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+
+
+<main>
+    <!-- About Me Bib Section -->
+    <div class="AMWrapper">
+        <img class="ab-Me" src="assets/MeCupRamen.jpg" alt="Picture of Me">
+            
+        <article class="aboutMe">
+            <h1>About Me</h1>
+            <p>
+                Hello! There isn't much behind what you see if you meet me in person. However, for those who do not have the pleasure
+                of meeting me, I am a Computer Science Major at CSULA and am based in California. I am born and raised in LA County and wish
+                 to pursue Software Development. I am not restricted to this dream and is in progress of learning other schools of CS like 
+                 Cyber Security and IT. My hobbies include playing boardgames, collecting trading cards, practicing my trumpet, coding 
+                 and playing a variety of video games. 
+            </p>
+            <button class="myResume">
+                <a href="/assets/Jonathan_Dang-Resume(1).pdf" download>Download Resume</a>
+            </button>
+        </article>
+    </div>      
+
+    <br>
+
+    <div class="slideshow-container">
+        <div class="mySlides">
+            <img src="/assets/img/p (1).jpg" alt="">
+            <div class="slide-caption">Wide angle shot of some city in Japan</div>
+        </div>
+        <div class="mySlides">
+            <img src="/assets/img/p (2).jpg" alt="">
+            <div class="slide-caption">Hong Kong Skyscrappers</div>
+        </div>
+        <div class="mySlides">
+            <img src="/assets/img/p (3).jpg" alt="">
+            <div class="slide-caption">Night time shot of some restroom in a Japanese Park</div>
+        </div>
+        <div class="mySlides">
+            <img src="/assets/img/p (4).jpg" alt="">
+            <div class="slide-caption">Forest Hike in Hong Kong</div>
+        </div>
+        <div class="mySlides">
+            <img src="/assets/img/p (5).jpg" alt="">
+            <div class="slide-caption">Temple Plaza in Hong Kong</div>
+        </div>
+        <div class="mySlides">
+            <img src="/assets/img/p (6).jpg" alt="">
+            <div class="slide-caption">Walking through the Thousand Tori gates in Japan</div>
+        </div>
+        <div class="mySlides">
+            <img src="/assets/img/p (7).jpg" alt="">
+            <div class="slide-caption">Walking through the Thousand Tori gates in Japan</div>
+        </div>
+        <div class="mySlides">
+            <img src="/assets/img/p (8).jpg" alt="">
+            <div class="slide-caption">Some historical Japanese castle courtyard</div>
+        </div>
+
+        <button class="left" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+
+    <article class="aboutMe">
+        <p>
+            Above, you can see various pictures of my interests and travels! Not much to see here as I have yet to pick out a 
+            quality selection of photos to actually fit into the website, so you have to sit here with these poorly fitted
+            JPGs. I have traveled to various states in the USA, Hokaido and Tokyo Japan, Hong Kong, Shanghai, and WuXi.
+        </p>
+    </article>
+</main>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+    
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+</script>
+
+
+<footer>
+    <nav>
+        <div class="iconWrapper">
+            <div class="iconContainer">
+                <a href="https://www.linkedin.com/in/jd-jona-dang/" class="icon" target="blank"><i class="fa fa-linkedin-square"></i></a>
+                <a href="https://github.com/Jonathan-Dang" class="icon" target="blank"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    
+        <div class="footerCR">
+            <div class="footerCR-text">&copy; Jonathan Dang 2023</div>
+        </div>
+    </nav>
+</footer>
+
+
+<div class="stars">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+    <img src="/assets/star.png" alt="">
+</div>
+</body>
+</html>
